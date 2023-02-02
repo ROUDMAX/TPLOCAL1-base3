@@ -1,0 +1,99 @@
+﻿@model TPLOCAL1_base.Models.FormulaireModel
+@{
+    Layout = "_Layout.cshtml";
+    ViewBag.Title = "Formulaire TP HN";
+    ViewBag.h1 = "Formulaire TP HN";
+    ViewBag.Link1 = "<a href=\"/Home/Index\">Page d'accueil</a>";
+    ViewBag.Link2 = "<a href=\"/Home/Index/ListeAvis\">List Avis</a>";
+
+}
+
+
+@Html.ValidationSummary(false, "")
+@using (Html.BeginForm("ValidationFormulaire", "Home", FormMethod.Post))
+{
+    <table>
+        <caption>
+            Information personnelles
+        </caption>
+        <tr>
+            <td>@Html.DisplayNameFor(f => f.Nom)</td>
+            <td>@Html.TextBoxFor(f => f.Nom)</td>
+
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(f => f.Prenom)</td>
+            <td>@Html.TextBoxFor(f => f.Prenom)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(f => f.Sexe)</td>
+
+            <td>
+
+                <select name="sexe">
+                    <option>Sélectionner un sexe</option>
+                    <option value="Homme">Homme</option>
+                    <option value="Femme">Femme</option>
+                    <option value="Autre">Autre</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(f => f.Adresse)</td>
+            <td>@Html.TextBoxFor(f => f.Adresse)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(f => f.Codepostal)</td>
+            <td>@Html.TextBoxFor(f => f.Codepostal)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(f => f.Ville)</td>
+            <td>@Html.TextBoxFor(f => f.Ville)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(f => f.Email)</td>
+            <td>@Html.TextBoxFor(f => f.Email)</td>
+        </tr>
+
+    </table>
+    <table>
+        <caption>
+            Information formation suivie
+        </caption>
+        <tr>
+
+            <td>@Html.DisplayNameFor(f => f.DateFormation)</td>
+            <td>@Html.TextBoxFor(f => f.DateFormation, new { type = "date" })</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(f => f.TypeFormation)</td>
+            <td>
+                <select name="TypeFormation">
+                    <option>Sélectionner une formation</option>
+                    <option value="Formation Cobol">Formation Cobol</option>
+                    <option value="Formation Objet">Formation Objet</option>
+                    <option value="Formation Autre">Formation Double Compétence</option>
+                </select>
+            </td>
+
+        </tr>
+    </table>
+    <br />
+    <table>
+        <caption>
+            Avis sur la formation
+        </caption>
+        <tr>
+            <td>@Html.DisplayNameFor(f => f.Formationcobol)</td>
+            <td>@Html.TextBoxFor(f => f.Formationcobol)</td>
+        </tr>
+        <tr>
+            <td>@Html.DisplayNameFor(f => f.FormationC)</td>
+            <td>@Html.TextBoxFor(f => f.FormationC)</td>
+        </tr>
+        <tr>
+            <td style="border: 0px;"></td>
+            <td style="border: 0px;"><input type="submit" name="submit" value="Valider" /> </td>
+        </tr>
+    </table>
+}

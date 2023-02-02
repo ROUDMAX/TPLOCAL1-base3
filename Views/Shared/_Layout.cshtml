@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="/css/Index.css" />
+</head>
+<body>
+    <header>
+
+        <img src="/css/GroupeHN.png" class="image" alt="GroupeHN" />
+
+        <h1>@ViewBag.h1 </h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li>@Html.Raw(ViewBag.Link1)</li>
+            <li>@Html.Raw(ViewBag.Link2)</li>
+        </ul>
+
+    </nav>
+    <section>
+        @RenderBody()
+    </section>
+</body>
+</html>

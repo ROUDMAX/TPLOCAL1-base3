@@ -1,0 +1,45 @@
+﻿@model List<TPLOCAL1_base.Models.Avis>
+@{
+    Layout = "_Layout.cshtml";
+    ViewBag.Title = "Liste des avis";
+    ViewBag.h1 = "Liste des avis";
+    ViewBag.Link1 = "<a href=\"/Home/Index\">Page d'accueil</a>";
+    ViewBag.Link2 = "<a href=\"/Home/Index/Formulaire\">Formulaire</a>";
+}
+<p>
+    Liste
+</p>
+<table>
+    <thead>
+        <tr>
+            <td>Nom</td>
+            <td>Prenom</td>
+            <td>Avis donné</td>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prenom)
+            </td>
+            @if (item.AvisDonne == "o" || item.AvisDonne == "O")
+            {
+                <td class="AvisOui">
+                    Oui
+                </td>
+
+            }
+            else
+            {
+                <td class="AvisNon">
+                    Non
+                </td>
+            }
+        </tr>
+    }
+</table>
+
