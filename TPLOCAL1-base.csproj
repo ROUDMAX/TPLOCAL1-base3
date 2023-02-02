@@ -6,11 +6,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\css\Index2.css" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="NewFolder\" />
   </ItemGroup>
 
   <ItemGroup>
     <None Include="wwwroot\css\GroupeHN.png" />
+    <None Include="wwwroot\css\Index2.css" />
     <None Include="wwwroot\css\Index.css" />
   </ItemGroup>
 

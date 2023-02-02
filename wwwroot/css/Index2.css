@@ -15,6 +15,7 @@ h1 {
 
 .container {
     display: flex;
+    justify-content: flex-start;
 }
 
 nav {
@@ -22,7 +23,6 @@ nav {
     border: 2px solid #8c014c;
     background-color: #8c014c;
     color: white;
-    float: left;
 }
 
 li {
@@ -39,7 +39,7 @@ section {
 }
 
 table, th, td {
-    border: 2px solid;
+    border: 1px solid;
 }
 
 .AvisOui {

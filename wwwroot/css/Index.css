@@ -13,8 +13,11 @@ h1 {
     vertical-align: middle;
 }
 
+
+
 nav {
-    width: 150px;
+    float : left;
+    width : 150px;
     border: 2px solid #8c014c;
     background-color: #8c014c;
     color: white;
@@ -34,7 +37,7 @@ section {
 }
 
 table, th, td {
-    border: 1px solid;
+    border: 2px solid;
 }
 
 .AvisOui {

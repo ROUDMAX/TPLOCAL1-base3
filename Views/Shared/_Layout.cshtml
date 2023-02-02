@@ -12,8 +12,7 @@
         <img src="/css/GroupeHN.png" class="image" alt="GroupeHN" />
 
         <h1>@ViewBag.h1 </h1>
-    </header>
-
+    </header>  
     <nav>
         <ul>
             <li>@Html.Raw(ViewBag.Link1)</li>
@@ -21,8 +20,13 @@
         </ul>
 
     </nav>
+  
+  
     <section>
         @RenderBody()
     </section>
+  
+  
+
 </body>
 </html>
